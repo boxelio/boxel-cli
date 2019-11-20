@@ -1,6 +1,6 @@
 {
   "name": "@boxel/boxel-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Boxel Command Line Interface",
   "main": "bin/index.js",
   "scripts": {
