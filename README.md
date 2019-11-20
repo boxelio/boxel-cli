@@ -8,9 +8,11 @@ Coming soon...
 
 ## Usage
 
-### Example: Create a new Boxel
+## boxel recipe
+
+### Example: Create a new Boxel Recipe
 ```
-$ boxel create myboxel
+$ boxel recipe create myboxel
 Creating boxel "myboxel"...
   - New directory (./myboxel)
   - Initialized default recipe (./myboxel/boxel.json)
@@ -22,9 +24,9 @@ Creating boxel "myboxel"...
 $
 ```
 
-### Example: Create a new Boxel with some options
+### Example: Create a new Boxel Recipe with some options
 ```
-$ boxel create myboxel --brl-version 0.0.2 --base-os=boxos --base-os-version=0.0.2
+$ boxel recipe create myboxel --brl-version 0.0.2 --base-os=boxos --base-os-version=0.0.2
 Creating boxel "myboxel"...
   - New directory (./myboxel)
   - Initialized default recipe (./myboxel/boxel.json)
@@ -33,5 +35,17 @@ Creating boxel "myboxel"...
     - Current Stable Upstream OS: DietPi v6.26.3
   - Ensuring hooks
   - Linking libraries
+$
+```
+
+### Example: Publish a Boxel Recipe
+```
+$ cd myboxel
+$ boxel recipe publish
+Publishing boxel "myboxel"...
+  - BoxelHub User: kevinelliott
+  - Incremented recipe version from 0.0.2 to 0.0.3
+  - Publishing "myboxel:v0.0.3" publicly
+Boxel "myboxel:v0.0.3" published to https://hub.boxel.io/kevinelliott/myboxel/0.0.3
 $
 ```
