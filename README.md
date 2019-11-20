@@ -82,7 +82,7 @@ Creating boxel "myboxel"...
     - Current Stable Upstream OS: DietPi v6.26.3
   - Ensuring hooks
   - Linking libraries
-$
+Customize your new boxel recipe in "./myboxel/boxel.json".
 ```
 
 ### Example: Create a new Boxel Recipe with some options
@@ -96,7 +96,7 @@ Creating boxel "myboxel"...
     - Current Stable Upstream OS: DietPi v6.26.3
   - Ensuring hooks
   - Linking libraries
-$
+Customize your new boxel recipe in "./myboxel/boxel.json".
 ```
 
 ### Example: Publish a Boxel Recipe
@@ -107,6 +107,5 @@ Publishing boxel "myboxel"...
   - BoxelHub User: kevinelliott
   - Incremented recipe version from 0.0.2 to 0.0.3
   - Publishing "myboxel:v0.0.3" publicly
-Boxel "myboxel:v0.0.3" published to https://hub.boxel.io/kevinelliott/myboxel/0.0.3
-$
+Boxel "myboxel:v0.0.3" published to https://hub.boxel.io/kevinelliott/myboxel/v0.0.3
 ```
