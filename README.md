@@ -45,7 +45,7 @@ $
 
 ### Example: Create a new Boxel Recipe with some options
 ```
-$ boxel recipe create myboxel --brl-version 0.0.2 --base-os=boxos --base-os-version=0.0.2
+$ boxel recipe create myboxel --brl-version 0.0.2 --base-os boxos --base-os-version 0.0.2
 Creating boxel "myboxel"...
   - New directory (./myboxel)
   - Initialized default recipe (./myboxel/boxel.json)
