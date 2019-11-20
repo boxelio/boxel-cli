@@ -11,7 +11,7 @@ Coming soon...
 ## boxel
 
 ```
-~/C/D/w/b/boxel-cli ❯❯❯ boxel                                                                                                                  master ◼
+~/C/D/w/b/boxel-cli ❯❯❯ boxel                                                                                                                    master
   _                   _ 
  | |__   _____  _____| |
  | '_ \ / _ \ \/ / _ \ |
@@ -26,16 +26,15 @@ USAGE
 
 COMMANDS
 
- flash      Flash an image to a thumbdrive
+ help       Get help for a command
  image      Create and manage images
  instance   Manage a running Boxel instance
  login      Login to BoxelHub
  logout     Logout of BoxelHub
- publish    Publish a recipe to BoxelHub
  recipe     Create and manage recipes
  simulate   Simulate in a local VM
 
-Follow any command with "help" in order to learn more about the subcommands and options available.
+To get command help, pass the command to "help" in order to learn more about the subcommands and options available.
 ```
 
 ## boxel login
