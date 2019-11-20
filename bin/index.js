@@ -9,7 +9,6 @@ const mainDefinitions = [
 ];
 const mainCommand = commandLineArgs(mainDefinitions, { stopAtFirstUnknown: true });
 const argv = mainCommand._unknown || [];
-console.log(mainCommand);
 
 function help() {
   figlet('boxel', function(err, data) {
@@ -139,9 +138,7 @@ if (mainCommand.name === 'help') {
   const subCommandDefinitions = [
     { name: 'name', defaultOption: true }
   ];
-  console.log(argv);
   const subCommand = commandLineArgs(subCommandDefinitions, { argv, stopAtFirstUnknown: true });
-  console.log(subCommand);
 
   if (subCommand.name === 'image') { helpImage(); }
   if (subCommand.name === 'instance') { helpInstance(); }
@@ -149,4 +146,10 @@ if (mainCommand.name === 'help') {
   if (subCommand.name === 'logout') { helpLogout(); }
   if (subCommand.name === 'recipe') { helpRecipe(); }
   if (subCommand.name === 'simulate') { helpSimulate(); }
+}
+
+if (mainCommand.name === 'login') {
+  const pkceLogin = require('../src/pkceLogin');
+  const instance = pkceLogin();
+  instance.login();
 }
