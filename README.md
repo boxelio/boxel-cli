@@ -8,6 +8,36 @@ Coming soon...
 
 ## Usage
 
+## boxel
+
+```
+~/C/D/w/b/boxel-cli ❯❯❯ boxel                                                                                                                  master ◼
+  _                   _ 
+ | |__   _____  _____| |
+ | '_ \ / _ \ \/ / _ \ |
+ | |_) | (_) >  <  __/ |
+ |_.__/ \___/_/\_\___|_|
+                        
+Create and manage Boxel recipes and images for embedded platforms.
+
+USAGE
+
+ $ boxel [COMMAND]
+
+COMMANDS
+
+ flash      Flash an image to a thumbdrive
+ image      Create and manage images
+ instance   Manage a running Boxel instance
+ login      Login to BoxelHub
+ logout     Logout of BoxelHub
+ publish    Publish a recipe to BoxelHub
+ recipe     Create and manage recipes
+ simulate   Simulate in a local VM
+
+Follow any command with "help" in order to learn more about the subcommands and options available.
+```
+
 ## boxel login
 
 ### Example: Login to BoxelHub
