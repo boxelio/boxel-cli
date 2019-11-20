@@ -1,0 +1,24 @@
+{
+  "name": "boxel-cli",
+  "version": "0.0.1",
+  "description": "Boxel Command Line Interface",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kevin Elliott (https://github.com/boxelio/boxel-cli)",
+  "license": "",
+  "bin": {
+    "boxel": "./bin/index.js"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^18.3.2",
+    "command-line-args": "^5.1.1",
+    "command-line-usage": "^6.1.0",
+    "dotenv": "^8.0.0",
+    "figlet": "^1.2.4",
+    "open": "^6.3.0",
+    "uuid": "^3.3.3"
+  }
+}
