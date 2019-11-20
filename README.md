@@ -27,6 +27,48 @@ $ boxel logout
 Successfully logged out of BoxelHub.
 ```
 
+## boxel image build
+
+### Example: Build a Boxel Image from a Boxel Recipe
+```
+$ cd myboxel
+$ boxel build --recipe boxel.json --platform rpi4 --net wifi --net-config dhcp --hostname adsb4
+Building Boxel image...
+  - Recipe "myboxel" with version "0.0.2" is sane.
+  - Base OS (BoxOS v0.0.1) not cached, fetching... stored to ~/.boxel/bases/boxos-v0.0.1-rpi4
+  - Installing components...
+    - flightaware-dump1090
+    - flightaware-skyview1090
+    - adsbexchange-mlat-client
+    - wiedehopf-tar1090
+  - Applying host configuration...
+    - Hostname: adsb4
+    - Network type: wifi
+    - Network config: DHCP
+Image has been built to ./images/20191119-rpi4-adsb4.boxel
+```
+
+## boxel image flash
+
+### Example: Flash a Boxel Image to Thumbdrive
+```
+$ boxel image flash
+Preparing to flash an image to /dev/sda5...
+  - Detected latest image: ./images/2019119-rpi4-adsb4.boxel
+  - Converting image to flashable image
+Flashing ./images/2019119-rpi4-adsb4.img to /dev/sda5...
+  - Partitioning...
+    - BoxOS Recovery partition initiatized.
+    - BoxOS Recovery partition data written.
+    - Primary partition initialized.
+    - Secondary partition initialized.
+    - Data partition initialized.
+  - Writing image to Primary partition... Done.
+  - Verifying... OK.
+  - Unmounted.
+You may now remove the drive and insert it into your device.
+```
+
 ## boxel recipe
 
 ### Example: Create a new Boxel Recipe
