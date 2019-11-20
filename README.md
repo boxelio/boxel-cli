@@ -4,20 +4,22 @@ Command line interface for creating and managing Boxels (recipe-driven system im
 
 ## Installation
 
-Coming soon...
+```
+$ npm install @boxel/boxel-cli -g
+```
 
 ## Usage
 
-## boxel
+### boxel
 
 ```
 ~/C/D/w/b/boxel-cli ❯❯❯ boxel                                                                                                                    master
-  _                   _ 
+  _                   _
  | |__   _____  _____| |
  | '_ \ / _ \ \/ / _ \ |
  | |_) | (_) >  <  __/ |
  |_.__/ \___/_/\_\___|_|
-                        
+
 Create and manage Boxel recipes and images for embedded platforms.
 
 USAGE
@@ -37,9 +39,9 @@ COMMANDS
 To get command help, pass the command to "help" in order to learn more about the subcommands and options available.
 ```
 
-## boxel login
+### boxel login
 
-### Example: Login to BoxelHub
+#### Example: Login to BoxelHub
 ```
 $ boxel login
 Login to BoxelHub
@@ -48,17 +50,17 @@ Password: ****************
 Successfully logged in to BoxelHub.
 ```
 
-## boxel logout
+### boxel logout
 
-### Example: Logout of BoxelHub
+#### Example: Logout of BoxelHub
 ```
 $ boxel logout
 Successfully logged out of BoxelHub.
 ```
 
-## boxel image build
+### boxel image build
 
-### Example: Build a Boxel Image from a Boxel Recipe
+#### Example: Build a Boxel Image from a Boxel Recipe
 ```
 $ cd myboxel
 $ boxel build --recipe boxel.json --platform rpi4 --net wifi --net-config dhcp --hostname adsb4
@@ -77,9 +79,9 @@ Building Boxel image...
 Image has been built to ./images/20191119-rpi4-adsb4.boxel
 ```
 
-## boxel image flash
+### boxel image flash
 
-### Example: Flash a Boxel Image to Thumbdrive
+#### Example: Flash a Boxel Image to Thumbdrive
 ```
 $ boxel image flash
 Preparing to flash an image to /dev/sda5...
@@ -98,9 +100,9 @@ Flashing ./images/2019119-rpi4-adsb4.img to /dev/sda5...
 You may now remove the drive and insert it into your device.
 ```
 
-## boxel recipe
+### boxel recipe
 
-### Example: Create a new Boxel Recipe
+#### Example: Create a new Boxel Recipe
 ```
 $ boxel recipe create myboxel
 Creating boxel "myboxel"...
@@ -114,7 +116,7 @@ Creating boxel "myboxel"...
 Customize your new boxel recipe in "./myboxel/boxel.json".
 ```
 
-### Example: Create a new Boxel Recipe with some options
+#### Example: Create a new Boxel Recipe with some options
 ```
 $ boxel recipe create myboxel --brl-version 0.0.2 --base-os boxos --base-os-version 0.0.2
 Creating boxel "myboxel"...
@@ -128,7 +130,7 @@ Creating boxel "myboxel"...
 Customize your new boxel recipe in "./myboxel/boxel.json".
 ```
 
-### Example: Publish a Boxel Recipe
+#### Example: Publish a Boxel Recipe
 ```
 $ cd myboxel
 $ boxel recipe publish
