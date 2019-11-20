@@ -8,6 +8,25 @@ Coming soon...
 
 ## Usage
 
+## boxel login
+
+### Example: Login to BoxelHub
+```
+$ boxel login
+Login to BoxelHub
+Username: kevinelliott
+Password: ****************
+Successfully logged in to BoxelHub.
+```
+
+## boxel logout
+
+### Example: Logout of BoxelHub
+```
+$ boxel logout
+Successfully logged out of BoxelHub.
+```
+
 ## boxel recipe
 
 ### Example: Create a new Boxel Recipe
