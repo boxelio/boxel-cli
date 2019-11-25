@@ -1,27 +1,65 @@
 {
   "name": "@boxel/boxel-cli",
-  "version": "0.0.04",
+  "version": "0.0.4",
   "description": "Boxel Command Line Interface",
-  "main": "bin/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src/**/*",
+    "templates/*",
+    ".env"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "build:check": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "postversion": "git push && git push --tags",
+    "prepare": "yarn run build",
+    "prepublishOnly": "yarn test && yarn run lint",
+    "preversion": "yarn run lint",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "yarn run format && git add -A src"
   },
-  "keywords": [],
-  "author": "Kevin Elliott (https://github.com/boxelio/boxel-cli)",
-  "license": "",
   "bin": {
-    "boxel": "./bin/index.js"
+    "boxel": "./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boxelio/boxel-cli.git"
+  },
+  "keywords": [
+    "boxel",
+    "cli",
+    "boxos",
+    "embedded",
+    "rpi"
+  ],
+  "author": "Kevin Elliott <kevin@welikeinc.com>",
+  "license": "",
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "@hapi/hapi": "^18.3.2",
+    "@types/node": "^12.12.11",
     "axios": "^0.19.0",
     "command-line-args": "^5.1.1",
     "command-line-usage": "^6.1.0",
+    "deepmerge": "^4.2.2",
     "dotenv": "^8.0.0",
     "figlet": "^1.2.4",
     "fs": "^0.0.1-security",
     "mkdirp": "^0.5.1",
     "open": "^6.3.0",
+    "project-name-generator": "^2.1.7",
     "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/mkdirp": "^0.5.2",
+    "prettier": "^1.19.1",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.2"
   }
 }

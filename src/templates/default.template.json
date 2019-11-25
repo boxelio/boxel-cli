@@ -1,0 +1,32 @@
+{
+   "name": "REPLACE: your-boxel-name",
+   "version": "0.0.1",
+   "maintainer": {
+      "email": "REPLACE: your@email.com",
+      "name": "REPLACE: Your Name"
+   },
+   "description": "REPLACE: Your description goes here",
+   "recipeFormat": {
+      "type": "brl",
+      "version": "current"
+   },
+   "base": {
+      "os": "boxos",
+      "version": "current",
+      "name": "BoxOS",
+      "upstream": {
+         "os": "dietpi",
+         "version": "current",
+         "name": "DietPi"
+      }
+   },
+   "system": {
+      "network": {
+         "type": "dhcp",
+         "firewall": []
+      },
+      "devices": [],
+      "data_path": "/data"
+   },
+   "components": []
+}
